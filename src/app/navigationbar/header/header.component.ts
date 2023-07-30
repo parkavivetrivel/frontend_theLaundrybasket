@@ -10,6 +10,8 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class HeaderComponent implements OnInit {
   username: string;
+  isCollapsed = false;
+
   constructor(private cookieService: CookieService, private router:Router) { 
     this.username =this.cookieService.get('username');
 

@@ -13,44 +13,46 @@ import { CookieService } from 'ngx-cookie-service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
   globalData: any;
-  public login =this.fb.group({
-    username:new FormControl('',Validators.required),
-    password:['',Validators.required],
+  public login = this.fb.group({
+    username: new FormControl('', Validators.required),
+    password: ['', Validators.required],
   })
-  success : boolean = false;
+  success: boolean = false;
   http: any;
-  constructor(private router:Router, private AuthenticationService : AuthenticationService , 
-    private fb: FormBuilder,private cookieService: CookieService) { }
+  constructor(private router: Router, private AuthenticationService: AuthenticationService,
+    private fb: FormBuilder, private cookieService: CookieService) { }
 
 
   ngOnInit() {
 
   }
-loginuserdata(uservalues: any){
-    console.log("updated",uservalues);
-this.globalData = uservalues;
-    this.AuthenticationService .loginuserdata(uservalues). subscribe((kavi: any) =>{
-       this.cookieService.set('username', this.globalData.username);
-       
+  loginuserdata(uservalues: any) {
+    console.log("updated", uservalues);
+    this.globalData = uservalues;
+    this.AuthenticationService.loginuserdata(uservalues).subscribe((kavi: any) => {
+      this.cookieService.set('username', this.globalData.username);
+
       this.ngOnInit();
       console.log("updated");
-      this.login=this.fb.group({
-        username:['',Validators.required],
-        password:['',Validators.required],
+      this.login = this.fb.group({
+        username: ['', Validators.required],
+        password: ['', Validators.required],
       })
-      
-      console.log("checking",kavi);
-      if(kavi == true){
-      this.router.navigate(['/']);
+
+      console.log("checking", kavi);
+      if (kavi == true) {
+        window.location.reload()
+        this.router.navigate(['/']);
+
       }
-      
-    },(err: any)=>{
+
+    }, (err: any) => {
       console.log(err);
     });
   }
 
-  
+
 
 }

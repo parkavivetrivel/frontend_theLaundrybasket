@@ -4,6 +4,9 @@
     background-attachment: fixed;
     background-size: 100% 100%;
     color: #000000;
+    margin-top: -80px;
+    padding-top: 80px;
+    min-height: 100vh;
 
   }
 
@@ -41,4 +44,11 @@
   }
   #validation1 {
     color: red;
+  }
+
+  
+  @media only screen and (max-width: 992px) {
+    #body {
+      margin-top: -170px;
+    }
   }

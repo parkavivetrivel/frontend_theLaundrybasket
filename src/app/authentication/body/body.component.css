@@ -2,14 +2,20 @@
 
 #body{
   background-image: url('../../../assets/pexels-photo-3965545.jpeg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -80px;
+  padding-top: 80px;
+  min-height: 100vh;
 }
 #body2 {
     height: 650px;
-    background: #314b07;
+    background: #7a7968;
+    min-height: 100vh;
+
 }
 .gallery {
     --s: 300px;
@@ -163,4 +169,32 @@ background: #0057e3;
     left: 180px;
     border-color: black;
 
+  }
+
+  @media only screen and (min-width: 770px) {
+    #smallScreen {
+      display: none;
+    }
+    #bigScreen{
+      display: block;
+    }
+  }
+
+  @media only screen and (max-width: 770px) {
+    #smallScreen {
+      display: block;
+    }
+    #bigScreen{
+      display: none;
+    }
+  }
+
+  #smallScreen{
+    margin-top: 60px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    #body {
+      margin-top: -170px;
+    }
   }

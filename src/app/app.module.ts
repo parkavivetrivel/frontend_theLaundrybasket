@@ -14,7 +14,7 @@ import { OrderComponent } from './authentication/order/order.component';
 import { InvoiceComponent } from './authentication/invoice/invoice.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -41,7 +41,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-  
+    NgbModule
+
 
 
   ],
