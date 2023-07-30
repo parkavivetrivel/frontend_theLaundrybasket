@@ -1,0 +1,56 @@
+#signcss {
+     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; 
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  a:active {
+    text-decoration: none;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .margin {
+    margin: 30% 5% 5% 5%;
+  }
+
+  #validation {
+    color: red;
+  }
+
+  #validation1 {
+    color: red;
+  }
+
+  #validation2 {
+    color: red;
+  }
+
+  #box {
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #sucess,#failure {
+    display: none;
+  }
+
+  #signup{
+    display: block;
+  }

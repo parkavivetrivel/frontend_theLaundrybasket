@@ -1,0 +1,39 @@
+<div id="signcss">
+    <br><br>
+<div class="container mt-5 margin ">
+        <div class="row">
+            <div class="col-sm-8"></div>
+            <div class="col-sm-4">
+                <form class="signup_form" role="form" [formGroup]="signup" (ngSubmit)="signupuserdata(signup.value)"
+                    class="inputUsersForm">
+                    <div id="box">
+                        <h1 class="display-6">sign up</h1>
+                        <label>Name</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter name" name="name"
+                            formControlName="username" required>
+                        <p id="validation"></p>
+                        <label>Email id</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"
+                            formControlName="email" required>
+                        <p id="validation1"></p>
+                        <label>Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter password"
+                            name="password" formControlName="password" required>
+                        <p id="validation2"></p>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary" type="submit"
+                                class="btn btn-dark">join</button>
+                        </div>
+                        <div class="text-center">
+                            <a routerLink="/login" style="color: rgb(1, 1, 15);">Already a user?
+                                <span style="color: rgb(41, 41, 199);">LOGIN</span>
+                            </a>
+                            <br><br>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br><br>
+</div>

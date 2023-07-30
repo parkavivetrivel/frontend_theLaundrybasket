@@ -1,0 +1,94 @@
+#orderbg {
+    background-image: url("https://img.freepik.com/free-photo/man-holding-pile-clean-clothes_23-2149117026.jpg?w=740&t=st=1675700248~exp=1675700848~hmac=836860fa61fbf0194cf2490d90b5acc305244266e3a42fa9d3932a7289acce76");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  #body {
+    background-image: url("https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    height: 1050px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+input[type='number']{
+    width: 50px;
+} 
+
+#body1 {
+    height: 650px;
+    background: #D3D3D3;
+}
+
+#body2 {
+    height: 650px;
+    background: #1a224a;
+}
+
+#body3 {
+    height: 400px;
+    background: #D3D3D3;
+}
+
+p.light {
+    font: weight 90px;
+    ;
+}
+
+.p {
+    left: 20x;
+
+}
+
+.margin {
+    margin-top: 7px;
+}
+
+#box {
+    border-radius: 20px;
+    background-color: rgb(252, 250, 250);
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button {
+    border: 20px;
+    outline: none;
+    border-radius: 10px;
+   
+
+
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: #000000;
+
+}
+
+.form-control {
+    width: 70%;
+
+}
+
+p.c {
+    white-space: pre;
+}
+
+.left-button {
+    float: right;
+}
+.right-button1 {
+    float: left;
+}
+
+.right-button {
+    float: left;
+}
+.my-input {
+    min-width: 1px;
+    /* Adjust this value to set the minimum input field size */
+}
