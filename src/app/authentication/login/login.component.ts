@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
 
       console.log("checking", kavi);
       if (kavi == true) {
-        window.location.reload()
+       
         this.router.navigate(['/']);
 
       }
