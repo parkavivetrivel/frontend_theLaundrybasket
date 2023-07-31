@@ -8,7 +8,9 @@
     padding-top: 80px;
    
   }
-  
+  a:link {
+    text-decoration: none;
+  }
   a:visited {
     text-decoration: none;
   }
