@@ -32,6 +32,9 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
 
   }
+  refreshLogin(){
+          window.location.reload();
+  }
   loginuserdata(uservalues: any) {
     console.log("updated", uservalues);
     this.loginCard = false;
@@ -61,6 +64,7 @@ export class LoginComponent implements OnInit {
         this.loginFailed = true;
           
       }
+      
 
 
     }, (err: any) => {

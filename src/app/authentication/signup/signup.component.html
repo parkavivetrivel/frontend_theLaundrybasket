@@ -31,7 +31,7 @@
                             name="password" formControlName="password" required>
                         <p id="validation2"></p>
                         <div class="text-center">
-                            <button type="button" class="btn btn-primary" type="submit" class="btn btn-dark">Join with
+                            <button type="button" class="btn btn-primary" type="submit" class="btn btn-dark" [disabled]="!signup.valid">Join with
                                 us</button>
                         </div>
                         <div class="text-center">
