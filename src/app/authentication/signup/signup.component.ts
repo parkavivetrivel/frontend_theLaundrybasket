@@ -11,40 +11,51 @@ import { AuthenticationService } from '../authentication.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  public signup =this.fb.group({
-    username:new FormControl('',Validators.required),
-    email:['',Validators.required],
-    password:['',Validators.required],
+  public signup = this.fb.group({
+    username: new FormControl('', Validators.required),
+    email: ['', Validators.required],
+    password: ['', Validators.required],
   })
-  success : boolean = false;
-  constructor(private router:Router, private AuthenticationService : AuthenticationService , 
+  success: boolean = false;
+  signUpSuccess: boolean = false;
+  signUpFailure: boolean = false;
+  signUpCard: boolean = true;
+
+  constructor(private router: Router, private AuthenticationService: AuthenticationService,
     private fb: FormBuilder) { }
 
   ngOnInit() {
   }
-  signupuserdata(uservalues: any){
-    console.log("updated",uservalues);
-    this.AuthenticationService .signupuserData(uservalues). subscribe((res: any) =>{
-      if(res==true){
-        this.router.navigate(['/signedsuccess']);
+
+  signupuserdata(uservalues: any) {
+    console.log("updated", uservalues);
+    this.AuthenticationService.signupuserData(uservalues).subscribe((res: any) => {
+      if (res == true) {
+        this.signUpCard  = false;
+        this.signUpSuccess = true;
+        this.signUpFailure = false;
+
       }
-      else{
-        this.router.navigate(['/signedfailure']);
+      else {
+        this.signUpCard = false;
+        this.signUpSuccess = false;
+        this.signUpFailure = true;
+
       }
       this.ngOnInit();
       console.log("updated");
-      this.signup=this.fb.group({
-        username:['',Validators.required],
-        email:['',Validators.required],
-        password:['',Validators.required],
+      this.signup = this.fb.group({
+        username: ['', Validators.required],
+        email: ['', Validators.required],
+        password: ['', Validators.required],
       })
       this.success = true;
       return res;
-    },(err: any)=>{
+    }, (err: any) => {
       console.log(err);
     }
     );
   }
- 
+
 }
 

@@ -1,6 +1,6 @@
 <div id="signcss">
-    <br><br>
-<div class="container mt-5 margin ">
+    <br><br><br><br>
+    <div class="container mt-5 margin" *ngIf="signUpCard">
         <div class="row">
             <div class="col-sm-8"></div>
             <div class="col-sm-4">
@@ -21,8 +21,8 @@
                             name="password" formControlName="password" required>
                         <p id="validation2"></p>
                         <div class="text-center">
-                            <button type="button" class="btn btn-primary" type="submit"
-                                class="btn btn-dark">Join with us</button>
+                            <button type="button" class="btn btn-primary" type="submit" class="btn btn-dark">Join with
+                                us</button>
                         </div>
                         <div class="text-center">
                             <a routerLink="/login" style="color: rgb(1, 1, 15);">Already a user?
@@ -34,6 +34,37 @@
                 </form>
             </div>
         </div>
+    </div>
+    <br><br>
+    <div class="container mt-5 margin" >
+    <div class="row" *ngIf="signUpSuccess" >       
+        <div class="col-sm-8"></div>
+        <div class="col-sm-4"><br><br>
+            <div id="box">
+                <h1 class="display-6">Signup successful!!</h1>
+                <p id="thappu">
+                    <a routerLink="/login"> login with your details</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+    <br><br>
+
+
+
+    <div class="container mt-5 margin" >
+    <div class="row" *ngIf="signUpFailure">
+        <div class="col-sm-8"></div>
+        <div class="col-sm-4"><br><br>
+            <div id="box">
+                <h1 class="display-6">Signup Failed</h1>
+                <p id="thappu">
+                    <a routerLink="/signup">Try once again to signup</a>
+                </p>
+            </div>
+        </div>
+    </div>
     </div>
     <br><br>
 </div>

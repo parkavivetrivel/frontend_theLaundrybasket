@@ -1,12 +1,13 @@
 #signcss {
+  background-image: url('../../../assets/pexels-karolina-grabowska-4210373.jpg');
      background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%; 
+    min-height: 100vh;
+    margin-top: -120px;
   }
 
-  a:link {
-    text-decoration: none;
-  }
+  
 
   a:visited {
     text-decoration: none;
@@ -47,10 +48,12 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
-  #sucess,#failure {
-    display: none;
+  #thappu{
+    text-align: center;
   }
 
-  #signup{
-    display: block;
+  #thappu a {
+    text-align: center;
+    color: white  !important;
+    font-size: larger;
   }
