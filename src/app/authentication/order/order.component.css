@@ -1,17 +1,16 @@
-#orderbg {
-    background-image: url("https://img.freepik.com/free-photo/man-holding-pile-clean-clothes_23-2149117026.jpg?w=740&t=st=1675700248~exp=1675700848~hmac=836860fa61fbf0194cf2490d90b5acc305244266e3a42fa9d3932a7289acce76");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-  }
+
   #body {
-    background-image: url("https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    height: 1050px;
-    background-repeat: no-repeat;
+    
     background-attachment: fixed;
-    background-size: cover;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -80px;
+  padding-top: 80px;
+  min-height: 100vh;
 
 }
+
 input[type='number']{
     width: 50px;
 } 
@@ -61,13 +60,6 @@ button {
 
 }
 
-body {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    color: #000000;
-
-}
 
 .form-control {
     width: 70%;

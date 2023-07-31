@@ -20,6 +20,10 @@ export class LoginComponent implements OnInit {
     password: ['', Validators.required],
   })
   success: boolean = false;
+  loginCard: boolean = true;
+  showGif:boolean = false;
+  loginFailed:boolean = false;
+
   http: any;
   constructor(private router: Router, private AuthenticationService: AuthenticationService,
     private fb: FormBuilder, private cookieService: CookieService) { }
@@ -30,6 +34,8 @@ export class LoginComponent implements OnInit {
   }
   loginuserdata(uservalues: any) {
     console.log("updated", uservalues);
+    this.loginCard = false;
+    this.showGif = true;
     this.globalData = uservalues;
     this.AuthenticationService.loginuserdata(uservalues).subscribe((kavi: any) => {
       this.cookieService.set('username', this.globalData.username);
@@ -42,11 +48,20 @@ export class LoginComponent implements OnInit {
       })
 
       console.log("checking", kavi);
+      this.showGif = false;
       if (kavi == true) {
        
-        this.router.navigate(['/']);
+        this.router.navigate(['/']).then(() => {
+          window.location.reload();
 
+        });
+       
       }
+      else{
+        this.loginFailed = true;
+          
+      }
+
 
     }, (err: any) => {
       console.log(err);

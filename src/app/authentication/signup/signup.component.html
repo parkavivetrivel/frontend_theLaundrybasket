@@ -1,6 +1,16 @@
+<div id="body">
 <div id="signcss">
-    <br><br><br><br>
-    <div class="container mt-5 margin" *ngIf="signUpCard">
+    <br><br>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-8"></div>
+            <div class="col-sm-4">
+        <img src="../../../assets/03-42-11-849_512.webp" height="275px" width="220px" style="margin-left: 50%;margin-right: 50%;margin-top: 50%;" alt="er" *ngIf="showGif">
+     
+    </div>
+    </div>
+    </div>    
+    <div class="container mt-5" *ngIf="signUpCard">
         <div class="row">
             <div class="col-sm-8"></div>
             <div class="col-sm-4">
@@ -36,7 +46,7 @@
         </div>
     </div>
     <br><br>
-    <div class="container mt-5 margin" >
+    <div class="container mt-5 margins" >
     <div class="row" *ngIf="signUpSuccess" >       
         <div class="col-sm-8"></div>
         <div class="col-sm-4"><br><br>
@@ -53,7 +63,7 @@
 
 
 
-    <div class="container mt-5 margin" >
+    <div class="container mt-5 margins" >
     <div class="row" *ngIf="signUpFailure">
         <div class="col-sm-8"></div>
         <div class="col-sm-4"><br><br>
@@ -67,4 +77,5 @@
     </div>
     </div>
     <br><br>
+</div>
 </div>

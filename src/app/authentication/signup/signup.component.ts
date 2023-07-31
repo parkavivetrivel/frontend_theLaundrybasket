@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit {
     password: ['', Validators.required],
   })
   success: boolean = false;
+  showGif:boolean = false; 
   signUpSuccess: boolean = false;
   signUpFailure: boolean = false;
   signUpCard: boolean = true;
@@ -29,11 +30,18 @@ export class SignupComponent implements OnInit {
 
   signupuserdata(uservalues: any) {
     console.log("updated", uservalues);
+    this.signUpCard  = false;
+    this.showGif = true;
+
     this.AuthenticationService.signupuserData(uservalues).subscribe((res: any) => {
+      this.showGif = false;
+
       if (res == true) {
         this.signUpCard  = false;
         this.signUpSuccess = true;
         this.signUpFailure = false;
+
+
 
       }
       else {

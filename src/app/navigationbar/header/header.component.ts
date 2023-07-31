@@ -21,12 +21,13 @@ export class HeaderComponent implements OnInit {
     
     this.ngOnInit();
     this.cookieService.deleteAll();
-    this.router.navigate(['/login'])
+
+    this.router.navigate(['/login']).then(() => {
+          window.location.reload();});
   }
   ngOnInit() {
     
   }
-
-
-
 }
+
+

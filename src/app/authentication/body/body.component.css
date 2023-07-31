@@ -84,7 +84,6 @@
 
 
   body {
-    background-image: url("https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     margin: 0;
     min-height: 100vh;
     display: grid;
@@ -202,6 +201,12 @@ background: #0057e3;
   @media only screen and (max-width: 600px) {
     #body2 {
       height: 900px;
+    }
+    
+  }
+  @media only screen and (max-width: 574px) {
+    #body {
+      background-image: url('../../../assets/pexels-karolina-grabowska-4210341.jpg');
     }
     
   }
