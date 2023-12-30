@@ -26,7 +26,7 @@
               formControlName="password">
             <p id="validation1"></p>
             <div class="text-center">
-              <button class="btn btn-primary" type="submit" class="btn btn-dark" [disabled]="!login.valid">Login</button><br>
+              <button mat-raised-button  type="submit" class="btn btn-dark" [disabled]="!login.valid">Login</button><br>
             </div>
             <div class="text-center">
               <a routerLink="/signup" style="color: black;">Need an account?
@@ -50,14 +50,5 @@
             </div>
         </div>
         </div>
-
-
-
-
-
-
-
        </div>
-      
-       
       <router-outlet></router-outlet>

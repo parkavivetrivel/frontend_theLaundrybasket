@@ -5,16 +5,14 @@ import { SignupComponent } from './signup/signup.component';
 import { BodyComponent } from './body/body.component';
 import { OrderComponent } from './order/order.component';
 import { InvoiceComponent } from './invoice/invoice.component';
-import { SignedsuccessComponent } from './signedsuccess/signedsuccess.component';
-import { SignedfailureComponent } from './signedfailure/signedfailure.component';
+
 const routes: Routes = [ 
   {path:'',component:BodyComponent},
   {path:'login' , component:LoginComponent },
   {path:'signup' , component:SignupComponent },
   {path:'order' , component : OrderComponent},
   {path:'invoice',component: InvoiceComponent},
-  {path:'signedsuccess',component:SignedsuccessComponent},
-  {path:'signedfailure',component:SignedfailureComponent}
+  
 
 ];
 
@@ -23,5 +21,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AuthenticationRoutingmodule { }
-export const routingComponents=[LoginComponent,SignupComponent,OrderComponent,InvoiceComponent,SignedsuccessComponent,SignedfailureComponent]
+export const routingComponents=[LoginComponent,SignupComponent,OrderComponent,InvoiceComponent,]
 
