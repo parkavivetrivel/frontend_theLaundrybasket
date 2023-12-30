@@ -6,25 +6,27 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 })
 export class AuthenticationService {
   
+  
+
   constructor(private http:HttpClient) { }
 
   signupuserData(uservalues: any){
     let headers2 = new HttpHeaders({'Content-Type':'application/json'});
     let options = ({headers:headers2});
     let body = {
+      
       username: uservalues.username,
       email: uservalues.email,
-      password: uservalues.password, 
-      // image:formData
-       
+      password: uservalues.password
     }
-    return this.http.post<any>('http://localhost:2023/signup', JSON.stringify(body));
+    return this.http.post('https://thelaundrybasket.onrender.com/signup', JSON.stringify(body),options);
   }
 
   loginuserdata(uservalues: any){
     let headers2 = new HttpHeaders({'Content-Type':'application/json'});
     let options = ({headers:headers2});
     let body = {
+      
       username: uservalues.username,
       password: uservalues.password
     }

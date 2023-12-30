@@ -12,8 +12,7 @@
     </div>    
     <div class="container mt-5" *ngIf="signUpCard">
         <div class="row">
-            <div class="col-sm-8">
-            </div>
+            <div class="col-sm-8"></div>
             <div class="col-sm-4">
                 <form class="signup_form" role="form" [formGroup]="signup" (ngSubmit)="signupuserdata(signup.value)"
                     class="inputUsersForm">
@@ -22,14 +21,6 @@
                         <label>Name</label>
                         <input type="text" class="form-control" id="username" placeholder="Enter name" name="name"
                             formControlName="username" required>
-                        <p id="validation"></p>
-                        <label>Image</label><br>
-                        <input type="file" class="form-control" (change)="onFileSelected($event)">
-                        <br>
-                        <div *ngIf="imagedata">
-                        <h1>
-                        <img [src]="imagedata" height="250px" width="250px"></h1>
-                        </div>
                         <p id="validation"></p>
                         <label>Email id</label>
                         <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"
