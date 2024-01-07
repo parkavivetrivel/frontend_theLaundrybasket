@@ -13,7 +13,7 @@ import { AuthenticationService } from '../authentication.service';
 export class SignupComponent implements OnInit {
   public signup = this.fb.group({
     username: new FormControl('', Validators.required),
-    email: ['', Validators.required],
+    mobileNumber: ['', Validators.required],
     password: ['', Validators.required],
   })
   success: boolean = false;
@@ -48,13 +48,12 @@ export class SignupComponent implements OnInit {
         this.signUpCard = false;
         this.signUpSuccess = false;
         this.signUpFailure = true;
-
       }
       this.ngOnInit();
       console.log("updated");
       this.signup = this.fb.group({
         username: ['', Validators.required],
-        email: ['', Validators.required],
+        mobileNumber: ['', Validators.required],
         password: ['', Validators.required],
       })
       this.success = true;

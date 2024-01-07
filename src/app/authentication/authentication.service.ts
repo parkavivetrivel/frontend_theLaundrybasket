@@ -13,15 +13,13 @@ export class AuthenticationService {
   signupuserData(uservalues: any){
     let headers2 = new HttpHeaders({'Content-Type':'application/json'});
     let options = ({headers:headers2});
-    let body = {
-      
+    let body = {     
       username: uservalues.username,
-      email: uservalues.email,
+      mobileNumber: uservalues.mobileNumber,
       password: uservalues.password
     }
     return this.http.post('https://thelaundrybasket.onrender.com/signup', JSON.stringify(body),options);
   }
-
   loginuserdata(uservalues: any){
     let headers2 = new HttpHeaders({'Content-Type':'application/json'});
     let options = ({headers:headers2});
@@ -31,6 +29,16 @@ export class AuthenticationService {
       password: uservalues.password
     }
     let par = this.http.post('https://thelaundrybasket.onrender.com/login', JSON.stringify(body),options);
+    return par;
+
+  }
+  partnerVerification(uservalues: any){
+    let headers2 = new HttpHeaders({'Content-Type':'application/json'});
+    let options = ({headers:headers2});
+    let body = {
+      mobileNumber: uservalues.mobileNumber
+    }
+    let par = this.http.post('http://localhost:2023/partner', JSON.stringify(body),options);
     return par;
 
   }
@@ -55,14 +63,7 @@ export class AuthenticationService {
   AccessOrderData(){
     let parkavi = this.http.get('https://thelaundrybasket.onrender.com/orderList');
     return parkavi;
-    
-
-
   }
-  
-  
-
-
   }
 
 

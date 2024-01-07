@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoginComponent } from './authentication/login/login.component';
+import { PartnersComponent } from './authentication/partners/partners.component';
 import { SignupComponent } from './authentication/signup/signup.component';
 import { HeaderComponent } from './navigationbar/header/header.component';
 import { FooterComponent } from './navigationbar/footer/footer.component';
@@ -15,10 +16,8 @@ import { InvoiceComponent } from './authentication/invoice/invoice.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
-
-
-
+// import { AgmCoreModule } from '@agm/core';
+import { GoogleMapsModule } from '@angular/google-maps'
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,11 +28,13 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     FooterComponent,
     BodyComponent,
     OrderComponent,
-    InvoiceComponent
+    InvoiceComponent,
+    PartnersComponent,
 
 
   ],
   imports: [
+    
     BrowserModule ,
     AppRoutingModule,
     FormsModule,
@@ -41,9 +42,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgbModule
-
-
+    NgbModule,
+    GoogleMapsModule
 
   ],
   providers: [],
