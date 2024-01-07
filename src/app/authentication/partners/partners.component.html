@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-5">
+            <!-- <h3>WANNA BE A PARTNER WITH US! <br> -->
+                <h3>WELCOME {{username|titlecase}} !!</h3>
+                <div class="sentence-container" [@fadeInOut]="currentSentence">
+                    <h6>{{ currentSentence }}</h6>
+                  </div>
+        </div>
+        <div class="col-sm-4">
+          <form class="login_form" role="form" [formGroup]="mobileNumber" (ngSubmit)="partnermobiledata(mobileNumber.value)"
+          class="inputUsersForm">
+            <div id="box">
+                <h1 class="display-6">GET STARTED</h1>
+                <label>Enter a mobile number to continue</label><br>
+                <input type="text" class="form-control" id="mobileNumber" placeholder="Enter mobile number" name="mobileNumber"formControlName="mobileNumber">
+                <p id="validation"></p>
+                  
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-dark" id="button">Continue</button>
+                  <br>
+                    <a routerLink="/signup" style="color: black;">Need an account?
+                      <span style="color: rgb(41, 41, 199);">Signup</span> </a>
+                  </div>
+                </div>
+          </form>  
+              </div>
+        </div>
+    </div>
+<br>      
