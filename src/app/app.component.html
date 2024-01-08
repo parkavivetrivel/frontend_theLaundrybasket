@@ -1,18 +1,3 @@
-<google-map height="500px"
-width="100%"
-[zoom]="zoom"
-  [center]="center"
-  [options]="options"
->  <map-marker
-*ngFor="let marker of markers"
-[position]="marker.position"
-[label]="marker.label"
-[title]="marker.title"
-[options]="marker.options"
->
-</map-marker>
-</google-map>
-{{currentLocation}}
 <app-header></app-header>
 <router-outlet ></router-outlet>
 <app-footer></app-footer>

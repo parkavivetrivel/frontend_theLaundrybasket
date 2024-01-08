@@ -17,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 // import { AgmCoreModule } from '@agm/core';
-import { GoogleMapsModule } from '@angular/google-maps'
+import { GoogleMapsModule } from '@angular/google-maps';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import { GoogleMapsModule } from '@angular/google-maps'
     HttpClientModule,
     BrowserAnimationsModule,
     NgbModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    // JwksValidationHandler
 
   ],
   providers: [],
